@@ -9,6 +9,7 @@
         :style="itemStyle"
         v-for="(label, index) in defaultOptions.items.labels"
         :key="index"
+        :class="[label.name === selectedItem ? '' : 'toggle-selected']"
       >
         <input
           :disabled="defaultOptions.items.disabled || disabled"
